@@ -1,4 +1,4 @@
-package com.loc.newsapp.presentation.onboarding.screen.componants
+package com.loc.newsapp.presentation.onboarding.componants
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image

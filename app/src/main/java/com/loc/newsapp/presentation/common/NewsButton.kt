@@ -5,6 +5,7 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
@@ -30,12 +31,17 @@ fun NewsButton(
         )
     }
 }
-@Preview(showBackground = true, uiMode = UI_MODE_NIGHT_YES)
-@Composable
-fun NewsButtonPreview(){
-    NewsAppTheme {
-        NewsButton("Button") {
 
-        }
+@Composable
+fun NewsTextButton(
+    text: String,
+    onclick: ()-> Unit
+){
+    TextButton(onClick = { onclick() }){
+        Text(
+            text= text,
+            style = MaterialTheme.typography.labelMedium.copy(fontWeight = FontWeight.SemiBold),
+            color = MaterialTheme.colorScheme.primary
+        )
     }
 }
